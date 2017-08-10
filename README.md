@@ -11,6 +11,6 @@ Za pokretanje:
 
 Za kreiranje gotove verzije (kreiranje .exe file-a):
 
-   npm run-script build
+    npm run-script build
 
  *kreira folder bin u kojem se nalazi executable file
