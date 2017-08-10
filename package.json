@@ -1,0 +1,25 @@
+{
+  "name": "BlueTooth-Kontrola-Zavrsni",
+  "version": "1.0.0",
+  "description": "Electron aplikacija za upravljanje robotom",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager ./ BesimZavrsni --platform=win32 --arch=x64 --out bin --version 1.6.2"
+  },
+  "repository": "https://github.com/100eyes/Besim-zavrsni-rad.git",
+  "keywords": [
+    "Besim",
+    "Zavrsni",
+    "Bluetooth",
+    "Robot",
+    "Djeca",
+    "Kontenjer"
+  ],
+  "author": "Besim Arnautovic",
+  "license": "",
+  "devDependencies": {
+    "electron": "~1.6.2",
+    "electron-packager": "^8.7.2"
+  }
+}

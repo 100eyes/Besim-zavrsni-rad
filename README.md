@@ -1,2 +1,1 @@
-# Besim-zavrsni-rad
-Bachelor thesis on ETF Sarajevo
+#Zavrsni rad - Upravljanje robota pomocu bluetooth komunikacije
