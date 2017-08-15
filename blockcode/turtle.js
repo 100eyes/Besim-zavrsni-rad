@@ -19,14 +19,14 @@
 		canvas.style.left = canvasPlaceholder.getBoundingClientRect().left + "px";
 		canvas.style.width = (WIDTH / PIXEL_RATIO) + "px"
 		canvas.style.height = (HEIGHT / PIXEL_RATIO) + "px"
-		if (evt){ 
-			Menu.runSoon(); 
+		if (evt){
+			Menu.runSoon();
 		}
 	}
 
 	function reset(){
 		recenter();
-		direction = deg2rad(90); // facing "up"		
+		direction = deg2rad(90); // facing "up"
 		visible = true;
 		pen = true; // when pen is true we draw, otherwise we move without drawing
 		color = 'black';
@@ -96,8 +96,8 @@
 	function back(block){ _moveForward(-Block.value(block)); }
 	function circle(block){ drawCircle(Block.value(block)); }
 	function _turn(degrees){ direction += deg2rad(degrees); }
-	function left(block){ _turn(Block.value(block)); }
-	function right(block){ _turn(-Block.value(block)); }
+	function left(block){ _turn(90); }
+	function right(block){ _turn(-90); }
 	function recenter(){ position = {x: WIDTH/2, y: HEIGHT/2}; }
 
 	function clear(){
@@ -113,16 +113,16 @@
 	clear();
 	drawTurtle();
 
-	Menu.item('Left', left, 5, 'degrees');
-	Menu.item('Right', right, 5, 'degrees');
-	Menu.item('Forward', forward, 10, 'steps');
-	Menu.item('Back', back, 10, 'steps');
-	Menu.item('Circle', circle, 20, 'radius');
-	Menu.item('Pen up', penUp);
-	Menu.item('Pen down', penDown);
-	Menu.item('Back to center', recenter);
-	Menu.item('Hide turtle', hideTurtle);
-	Menu.item('Show turtle', showTurtle);
+	Menu.item('Lijevo', left, null, null);
+	Menu.item('Desno', right, null, null);
+	Menu.item('Naprijed', forward, 1, 'korak(a)');
+	Menu.item('Nazad', back, 1, 'korak(a)');
+	// Menu.item('Circle', circle, 20, 'radius');
+	// Menu.item('Pen up', penUp);
+	// Menu.item('Pen down', penDown);
+	// Menu.item('Back to center', recenter);
+	// Menu.item('Hide turtle', hideTurtle);
+	// Menu.item('Show turtle', showTurtle);
 
 	script.addEventListener('beforeRun', clear, false); // always clear canvas first
 	script.addEventListener('afterRun', drawTurtle, false); // show turtle if visible

@@ -45,7 +45,7 @@
 			Block.run(children);
 		}
 	}
-	menuItem('Repeat', repeat, 10, []);
+	menuItem('Ponovi', repeat, 10, []);
 
 
 	global.Menu = {
