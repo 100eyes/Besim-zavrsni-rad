@@ -20,7 +20,9 @@
   "license": "",
   "devDependencies": {
     "electron": "~1.6.2",
-    "electron-packager": "^8.7.2",
     "electron-rebuild": "^1.6.0"
+  },
+  "dependencies": {
+    "electron-packager": "^8.7.2"
   }
 }
