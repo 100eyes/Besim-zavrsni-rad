@@ -23,7 +23,6 @@ function RecursiveParse(element){
   var container = element.getElementsByClassName('container');
   if(container.length == 1 && container[0].childNodes.length > 0){
     console.log(container);
-
     container[0].childNodes.forEach(RecursiveParse);
     SerialData = SerialData.concat('e');
   }
