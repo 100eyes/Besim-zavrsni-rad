@@ -8,8 +8,8 @@
 
 	function runSoon(){ scriptDirty = true; }
 
-	function menuItem(name, fn, value, units){
-		var item = Block.create(name, value, units);
+	function menuItem(name, fn, value, units, menuChar, parseChar){
+		var item = Block.create(name, value, units, menuChar,parseChar);
 		scriptRegistry[name] = fn;
 		menu.appendChild(item);
 		return item;
@@ -45,7 +45,7 @@
 			Block.run(children);
 		}
 	}
-	menuItem('Ponovi', repeat, 10, []);
+	menuItem('Ponovi', repeat, 10, [], 'p');
 
 
 	global.Menu = {

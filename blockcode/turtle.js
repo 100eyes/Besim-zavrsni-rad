@@ -113,10 +113,10 @@
 	clear();
 	drawTurtle();
 
-	Menu.item('Lijevo', left, null, null);
-	Menu.item('Desno', right, null, null);
-	Menu.item('Naprijed', forward, 1, 'korak(a)');
-	Menu.item('Nazad', back, 1, 'korak(a)');
+	Menu.item('Lijevo', left, null, null, 'l');
+	Menu.item('Desno', right, null, null, 'd');
+	Menu.item('Naprijed', forward, 1, 'korak(a)', 'f');
+	Menu.item('Nazad', back, 1, 'korak(a)', 'b');
 	// Menu.item('Circle', circle, 20, 'radius');
 	// Menu.item('Pen up', penUp);
 	// Menu.item('Pen down', penDown);

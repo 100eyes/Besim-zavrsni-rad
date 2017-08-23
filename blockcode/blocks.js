@@ -1,8 +1,8 @@
 (function(global){
 	'use strict';
 
-	function createBlock(name, value, contents){
-		var item = elem('div', {'class': 'block', draggable: true, 'data-name': name}, [name]);
+	function createBlock(name, value, contents, parseChar){
+		var item = elem('div', {'class': 'block', draggable: true, 'data-name': name, 'data-parsechar': parseChar}, [name]);
 		if (value !== undefined && value !== null){
 			item.appendChild(elem('input', {type: 'number', value: value}));
 		}
@@ -45,8 +45,9 @@
 		return script.filter(function(notNull){ return notNull !== null; });
 	}
 
+
 	function runBlocks(blocks){
-		blocks.forEach(function(block){ trigger('run', block); });
+		blocks.forEach(function(block){ trigger('run', block);});
 	}
 
 	global.Block = {

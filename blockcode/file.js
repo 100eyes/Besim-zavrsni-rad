@@ -83,7 +83,7 @@
 
     document.querySelector('.clear-action').addEventListener('click', clearScript, false);
     document.querySelector('.save-action').addEventListener('click', saveFile, false);
-    document.querySelector('.load-action').addEventListener('click', loadFile, false);
+    //document.querySelector('.load-action').addEventListener('click', loadFile, false);
     document.querySelector('.choose-example').addEventListener('change', loadExample, false);
 
 })(window);
