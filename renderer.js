@@ -2,9 +2,19 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 
-//const serialport = require('serialport')
-//const createTable = require('data-table')
+const serialport = require('serialport')
+const createTable = require('data-table')
 
+
+//Constats
+const OnlyRFPort = true;
+const BluetoothName = "/dev/rfcomm0";
+
+
+
+var port = new serialport(BluetoothName,{
+  baudRate: 9600
+}, false);
 var SerialData = '';
 
 function ParseSingle(element){
@@ -33,6 +43,11 @@ function ParseSerialData(){
   var scriptElement = document.getElementById('scriptid');
       scriptElement.childNodes.forEach(RecursiveParse);
   console.log(SerialData);
+  port.write(SerialData,function(err){
+        if(err){
+          console.log(err);
+        }
+      });
 
 }
 
@@ -40,8 +55,6 @@ document.querySelector('.load-action').addEventListener('click', ParseSerialData
 
 
 
-
-/*
 serialport.list((err, ports) => {
   console.log('ports', ports);
   if (err) {
@@ -60,7 +73,6 @@ serialport.list((err, ports) => {
   tableHTML = ''
   table.on('data', data => tableHTML += data)
   table.on('end', () => document.getElementById('ports').innerHTML = tableHTML)
-  ports.forEach(port => table.write(port))
+  ports.forEach(port => { if(OnlyRFPort == true && port.comName == BluetoothName) table.write(port)})
   table.end();
-}
-*/
+})

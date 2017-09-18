@@ -92,8 +92,8 @@
 	function penDown(){ pen = true; }
 	function hideTurtle(){ visible = false; }
 	function showTurtle(){ visible = true; }
-	function forward(block){ _moveForward(Block.value(block)); }
-	function back(block){ _moveForward(-Block.value(block)); }
+	function forward(block){ _moveForward(Block.value(block)*20); }
+	function back(block){ _moveForward(-Block.value(block)*20); }
 	function circle(block){ drawCircle(Block.value(block)); }
 	function _turn(degrees){ direction += deg2rad(degrees); }
 	function left(block){ _turn(90); }

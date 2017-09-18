@@ -23,6 +23,8 @@
     "electron-rebuild": "^1.6.0"
   },
   "dependencies": {
-    "electron-rebuild": "^1.6.0"
+    "data-table": "^2.0.0",
+    "electron-rebuild": "^1.6.0",
+    "serialport": "^5.0.0"
   }
 }
